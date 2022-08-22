@@ -46,16 +46,16 @@ export default function ProductScreen(props) {
                                     <div>Status</div>
                                     <div >
                                         {product.countInStock>0? (
-                                        <span className='success'>In Stock</span>
+                                        <span className="success">In Stock</span>
                                         ) : (   
-                                        <span className='error'>Unavailable</span>
+                                        <span className="danger">Unavailable</span>
                                         )}
                                     </div>
 
                                 </div>
                             </li>
                             <li>
-                                <button className='primary block'>Add to cart</button>
+                                <button className="primary block">Add to cart</button>
                             </li>
                         </ul>
 
