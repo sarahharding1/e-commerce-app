@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import productRouter from "./routers/productRouter.js";
 import userRouter from "./routers/userRouter.js";
+import orderRouter from "./routers/orderRouter.js";
 
 dotenv.config();
 
@@ -30,6 +31,7 @@ app.use((err, req, res, next) => {
 
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
+app.use("/api/orders", orderRouter);
 // eslint-disable-next-line no-undef
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
