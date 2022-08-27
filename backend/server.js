@@ -20,7 +20,10 @@ mongoose.connect(
     useUnifiedTopology: true,
   }
 );
-
+app.get("/api/config/paypal", (req, res) => {
+  // eslint-disable-next-line no-undef
+  res.send(process.env.PAYPAL_CLIENT_ID || "sb");
+});
 app.get("/", (req, res) => {
   res.send("Server is ready");
 });
