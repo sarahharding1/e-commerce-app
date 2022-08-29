@@ -10,16 +10,24 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// eslint-disable-next-line no-undef
-mongoose.connect(
-  // eslint-disable-next-line no-undef
-  process.env.MONGODB_URL ||
-    "mongodb+srv://admin:admin@cluster0.o2riywz.mongodb.net/?retryWrites=true&w=majority",
-  {
+mongoose.connect(process.env.MONGODB_URL || "mongodb+srv://admin:admin@cluster0.o2riywz.mongodb.net/test", {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+    useUnifiedTopology: true
+}
+,);
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
+
+// mongoose.connect(
+  
+//   process.env.MONGODB_URL ||
+//     "mongodb+srv://admin:admin@cluster0.o2riywz.mongodb.net/?retryWrites=true&w=majority",
+//   {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   }
+// );
+
 app.get("/api/config/paypal", (req, res) => {
   // eslint-disable-next-line no-undef
   res.send(process.env.PAYPAL_CLIENT_ID || "sb");
