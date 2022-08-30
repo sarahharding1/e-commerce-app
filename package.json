@@ -1,0 +1,35 @@
+{
+  "name": "amazona",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "MERN Stack App Development for repeat Final Year Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarahharding1/e-commerce-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarahharding1/e-commerce-app/issues"
+  },
+  "homepage": "https://github.com/sarahharding1/e-commerce-app#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.2",
+    "react-paypal-button-v2": "^2.6.3",
+    "redux-thunk": "^2.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "eslint-plugin-react": "^7.30.1",
+    "nodemon": "^2.0.19"
+  }
+}
