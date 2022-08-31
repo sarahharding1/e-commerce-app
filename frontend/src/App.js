@@ -197,8 +197,13 @@ function App() {
              path="/search/category/:category/name/:name"
              component={SearchScreen}
              exact
-           ></Route>
+           ></Route>  
           {/* <Route path="/profile" component={ProfileScreen}></Route> */}
+          <Route
+             path="/search/category/:category/name/:name/min/:min/max/:max/rating/:rating/order/:order"
+             component={SearchScreen}
+             exact
+           ></Route>
           <PrivateRoute
             path="/profile"
             component={ProfileScreen}
