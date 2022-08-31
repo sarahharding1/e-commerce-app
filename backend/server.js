@@ -40,6 +40,10 @@ app.get("/api/config/paypal", (req, res) => {
   // eslint-disable-next-line no-undef
   res.send(process.env.PAYPAL_CLIENT_ID || "sb");
 });
+app.get("/api/config/google", (req, res) => {
+  // eslint-disable-next-line no-undef
+  res.send(process.env.GOOGLE_API_KEY || "");
+});
 // app.get("/", (req, res) => {
 //   res.send("Server is ready");
 // });
