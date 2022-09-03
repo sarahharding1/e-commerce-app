@@ -17,11 +17,7 @@ mongoose.connect(
   // eslint-disable-next-line no-undef
   process.env.MONGODB_URL ||
     "mongodb+srv://admin:admin@cluster0.o2riywz.mongodb.net/test",
-  {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-  }
+  
 );
 // app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
@@ -60,6 +56,8 @@ app.get("*", (req, res) =>
 );
 // eslint-disable-next-line no-undef
 const port = process.env.PORT || 5000;
+
+
 app.listen(port, () => {
   console.log(`Serve at http://localhost:${port}`);
 });

@@ -1,15 +1,18 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useParams, useNavigate } from "react-router-dom";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 import MessageBox from "../components/MessageBox";
 
 export default function CartScreen(props) {
+  const navigate = useNavigate()
   const params = useParams();
-  const productId = params.id;
+  const { id: productId }= params;
+
   const { search } = useLocation();
   const qtyInUrl = new URLSearchParams(search).get("qty");
   const qty = qtyInUrl ? Number(qtyInUrl) : 1;
+
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
   const dispatch = useDispatch();
@@ -24,7 +27,7 @@ export default function CartScreen(props) {
   };
 
   const checkoutHandler = () =>{
-    props.history.push('/signin?redirect=shipping');
+    navigate('/signin?redirect=/shipping');
   };
   return (
     <div className="row top">
