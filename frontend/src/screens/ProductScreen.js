@@ -13,7 +13,7 @@ export default function ProductScreen(props) {
   const { loading, error, product } = productDetails;
   const dispatch = useDispatch();
   const params = useParams();
-  const { id: productId }= params;
+  const { id: productId } = params;
   const [qty, setQty] = useState(1);
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
@@ -91,13 +91,13 @@ export default function ProductScreen(props) {
                   <li>
                     Seller{" "}
                     <h2>
-                      <Link to={`/seller/${product.seller._id}`}>
+                      {/* <Link to={`/seller/${product.seller._id}`}>
                         {product.seller.seller.name}
-                      </Link>
+                      </Link> */}
                     </h2>
                     <Rating
-                      rating={product.seller.seller.rating}
-                      numReviews={product.seller.seller.numReviews}
+                      // rating={product.seller.seller.rating}
+                      // numReviews={product.seller.seller.numReviews}
                     ></Rating>
                   </li>
                   <li>
