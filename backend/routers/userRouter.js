@@ -95,7 +95,7 @@ userRouter.put('/profile', isAuth, expressAsyncHandler(async(req, res) => {
 
     })
   }
-}))
+}));
 userRouter.get(
   '/',
   isAuth,

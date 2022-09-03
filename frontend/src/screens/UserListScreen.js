@@ -17,7 +17,7 @@ import React, { useEffect } from 'react';
      success: successDelete,
    } = userDelete;
    const dispatch = useDispatch();
-   useEffect(() => {
+   useEffect(() => { 
      dispatch(listUsers());
      dispatch({
       type: USER_DETAILS_RESET,
