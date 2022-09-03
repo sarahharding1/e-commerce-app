@@ -190,7 +190,7 @@ function App() {
             ></Route>
             <Route path="/search/name" element={<SearchScreen />} exact></Route>
             <Route
-              path="/search/name/:name?"
+              path="/search/name/:name"
               element={<SearchScreen />}
               exact
             ></Route>
